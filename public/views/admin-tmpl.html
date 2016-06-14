@@ -1,0 +1,14 @@
+<h1>admin</h1>
+
+<input ng-model="product.name" placeholder="Name"></input>
+<input ng-model="product.age" placeholder="Age"></input>
+<button ng-click="productPush(product)">Add</button>
+
+<ul ng-repeat="product in data">
+  <li>{{product.name}}</li>
+  <li>{{product.age}}</li>
+  <input ng-model="newObj.name" placeholder="Edit Name"></input>
+  <input ng-model="newObj.age" placeholder="Edit Age"></input>
+  <button ng-click="productEdit(newObj, product._id)">Submit Changes</button>
+  <button ng-click="productDelete(product._id)">Delete Product</button>
+</ul>
